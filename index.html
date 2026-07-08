@@ -140,12 +140,12 @@ const JACKPOT_TIERS = {
     JACKPOT: { name:'JACKPOT', mult:100, glowClass:'major-glow', color:'#eab308', accent:'#fef08a' }
 };
 
-// Updated Payouts & Increased Readability Colors to match Option 1 specs
+// Updated Payouts (Even/Odd, 2 Heads/Tails, 3 Heads/Tails, and 4 Heads/Tails)
 const BET_OPTIONS = {
-    EVEN: { id: 'EVEN', label: 'EVEN', oddsStr: '1 : 0.95', baseMult: 1.95, bonusStr: '1 : 1.1', bonusMult: 2.1, check: (h) => h % 2 === 0,  titleColor: 'text-red-500', gridClass: 'col-span-3' },
-    ODD:  { id: 'ODD',  label: 'ODD',  oddsStr: '1 : 0.95', baseMult: 1.95, bonusStr: '1 : 1.1', bonusMult: 2.1, check: (h) => h % 2 !== 0,  titleColor: 'text-blue-400', gridClass: 'col-span-3' },
+    EVEN: { id: 'EVEN', label: 'EVEN', oddsStr: '1 : 0.9',  baseMult: 1.9,  bonusStr: '1 : 1.1', bonusMult: 2.1, check: (h) => h % 2 === 0,  titleColor: 'text-red-500', gridClass: 'col-span-3' },
+    ODD:  { id: 'ODD',  label: 'ODD',  oddsStr: '1 : 0.9',  baseMult: 1.9,  bonusStr: '1 : 1.1', bonusMult: 2.1, check: (h) => h % 2 !== 0,  titleColor: 'text-blue-400', gridClass: 'col-span-3' },
     H3T1: { id: 'H3T1', label: '3 HEADS 1 TAIL',  oddsStr: '1 : 2.7',  baseMult: 3.7,  bonusStr: '1 : 3.5',  bonusMult: 4.5,  check: (h) => h === 3,      titleColor: 'text-white', gridClass: 'col-span-2' },
-    H2T2: { id: 'H2T2', label: '2 HEADS 2 TAILS', oddsStr: '1 : 1.5',  baseMult: 2.5,  bonusStr: '1 : 1.9',  bonusMult: 2.9,  check: (h) => h === 2,      titleColor: 'text-white', gridClass: 'col-span-2' },
+    H2T2: { id: 'H2T2', label: '2 HEADS 2 TAILS', oddsStr: '1 : 1.4',  baseMult: 2.4,  bonusStr: '1 : 2.0',  bonusMult: 3.0,  check: (h) => h === 2,      titleColor: 'text-white', gridClass: 'col-span-2' },
     H1T3: { id: 'H1T3', label: '1 HEADS 3 TAILS', oddsStr: '1 : 2.7',  baseMult: 3.7,  bonusStr: '1 : 3.5',  bonusMult: 4.5,  check: (h) => h === 1,      titleColor: 'text-white', gridClass: 'col-span-2' },
     H4:   { id: 'H4',   label: 'ALL HEADS',       oddsStr: '1 : 13.5', baseMult: 14.5, bonusStr: '1 : 20.0', bonusMult: 21.0, check: (h) => h === 4,      titleColor: 'text-yellow-300', gridClass: 'col-span-3' },
     T4:   { id: 'T4',   label: 'ALL TAILS',       oddsStr: '1 : 13.5', baseMult: 14.5, bonusStr: '1 : 20.0', bonusMult: 21.0, check: (h) => h === 0,      titleColor: 'text-yellow-300', gridClass: 'col-span-3' },
@@ -910,8 +910,8 @@ function App() {
                                     Payout Adjustments
                                 </h3>
                                 <ul className="list-disc pl-5 space-y-1 text-sm text-gray-300">
-                                    <li>Even / Odd: <span className="text-white font-bold">1.95x</span> (Lightning: 2.1x)</li>
-                                    <li>2 Heads / 2 Tails: <span className="text-white font-bold">2.5x</span> (Lightning: 2.9x)</li>
+                                    <li>Even / Odd: <span className="text-white font-bold">1.9x</span> (Lightning: 2.1x)</li>
+                                    <li>2 Heads / 2 Tails: <span className="text-white font-bold">2.4x</span> (Lightning: 3.0x)</li>
                                     <li>3 Heads 1 Tail / 1 Head 3 Tails: <span className="text-white font-bold">3.7x</span> (Lightning: 4.5x)</li>
                                     <li>4 Heads / 4 Tails: <span className="text-white font-bold">14.5x</span> (Lightning: 21x)</li>
                                 </ul>
